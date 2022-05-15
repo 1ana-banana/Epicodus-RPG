@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = 'en-US'>
+  <head>
+    <title>⚔ Epic Epicodus RPG - Moto Edition 🏍 ⚔</title>
+  </head>
+  <body>
+    <div id = "charSelect">
+      <form>
+        <h2>Character Name: </h2>
+        <input type = "text" id = "charName" class = "form-control" required>
+        <h2>Character Class: </h2> 
+        <select id = "charClass" class = "form-control">
+          <option value = 'honda'>Honda</option>
+          <option value = 'suzuki'>Suzuki</option>
+          <option value = 'ducati'>Ducati</option>
+          <option value = 'triumph'>Triumph</option>
+        </select>
+        <button type = 'submit' id = "charCreate" class= "btn btn-success">Start Your Squidding!</button>
+      </form>
+    </div>
+    <div id = "battleScreen" class = "row">
+      <div id = "inventoryScreen"></div>
+      <div id = "character" class = "col-md-6">
+        <div id = "nameDisplay"></div>
+        <div id = "characterHP"></div>
+        <img id = "characterImg" src = "./assets/images/suzuki.jpg" alt = "character">
+        <br>
+        <p><span id = "charName"></span></p>
+      </div>
+      <div id = "monster" class = "col-md-6">
+        <div id = "monsterName"></div>
+        <div id = "monsterHP"></div>
+        <img src="./assets/images/enemy.png" alt="monster">
+        <br>
+        <p><span id = "monsterName"></span></p>
+      </div>
+      <button id = "charAttack" class = "btn btn-success">Rev Bomb Attack!</button>
+      <button id = "charRun" class = "btn btn-danger">Maxwrist away!</button>
+    </div>
+    <div id = "shopScreen">
+      <div id = "money"></div>
+      <label>Revzilla: </label>
+      <div id = "shopInventory"></div>
+      <label>Tank Bag: </label>
+      <div id = "charInventory"></div>
+      <label>Gear: </label>
+      <div id = "charGear"></div>
+      <button id = "equip" class = "btn btn-primary">Equip / Unequip</button>
+      <button id = "sell" class = "btn btn-primary">Sell</button>
+      <button id = "nextLevel" class = "btn btn-primary">Face your next calamari 🦑</button>
+    </div>
+    <div id = "gameOver">
+      <button id = "restart" class = "btn btn-primary">You stalled. Try again!</button>
+    </div>
+  </body>
+</html>
