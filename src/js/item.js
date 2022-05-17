@@ -8,7 +8,7 @@ export default class Item {
   }
 
   ToString() {
-    return '${this.name}: [str: $Pthis.str}, dex: ${this.dex}, int: ${this.int}] ${this.value *1.5}dollars';
+    return '${this.name}: [str: $this.str}, dex: ${this.dex}, int: ${this.int}] ${this.value *1.5}dollars';
   }
 
   static CreateItem(level) {
@@ -23,23 +23,30 @@ export default class Item {
         str = Math.floor((Math.random() * 5) + level * 2 + 3);
         dex = Math.floor((Math.random() * 5) + level + 1);
         int = Math.floor((Math.random() * 3));
-        className += weaponNames.class.warrior[Math.floor(Math.random() * 4)];
+        className += weaponNames.class.honda[Math.floor(Math.random() * 4)];
         break;
       case 1: 
         str = Math.floor((Math.random() * 5) + level + 1);
         dex = Math.floor((Math.random() * 5) + level * 2 + 3);
         int = Math.floor((Math.random() * 3));
-        className += weaponNames.class.assassin[Math.floor(Math.random() * 4)];
+        className += weaponNames.class.suzuki[Math.floor(Math.random() * 4)];
         break;
       case 2:
         str = Math.floor((Math.random() * 3));
         dex = Math.floor((Math.random() * 5) + level + 1);
         int = Math.floor((Math.random() * 5) + level * 2 + 3);
-        className += weaponNames.class.wizard[Math.floor(Math.random() * 4)];
+        className += weaponNames.class.ducati[Math.floor(Math.random() * 4)];
         break;
+      case 3:
+        str = Math.floor((Math.random() * 5));
+        dex = Math.floor((Math.random() * 3) + level + 1);
+        int = Math.floor((Math.random() * 5) + level * 2 + 3);
+        className += weaponNames.class.triumph[Math.floor(Math.random() * 4)];
+        break;
+      
     }
 
-    let name = weaponnames.prefix[Math.floor(Math.random() *9)] + " " + className + " of " +weaponNames.suffix[Math.floor(Math.random() * 8)];
+    let name = weaponNames.prefix[Math.floor(Math.random() * 9)] + " " + className + " of " + weaponNames.suffix[Math.floor(Math.random() * 8)];
 
     return new Item(name, str, dex, int, 10 * level);
   }
