@@ -1,13 +1,13 @@
 img {
-  max-width: fit-content;
+  max-width: 250px;
 }
 
-body {
+/* body {
   width: 80%;
   margin: auto;
   background-image: url("../assets/images/battle-background.jpg");
   background-repeat: repeat-x;
-}
+} */
 
 button {
   margin: 1em;

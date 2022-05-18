@@ -21,8 +21,8 @@ function updateList(listItems, className) {
 }
 
 function updateBattleUI(battle) {
-  $("#characterHP").text('${battle.character.hp}: - ${battle.monsterDamage}');
-  $("#monsterHP").text('${battle.monster.hp}: - ${battle.characterDamage}');
+  $("#characterHP").text(`${battle.character.hp}: -${battle.monsterDamage}`);
+  $("#monsterHP").text(`${battle.monster.hp}: -${battle.characterDamage}`);
   $("#nameDisplay").text(battle.character.name);
   $("#monsterName").text(battle.monster.name + " Squid");
 }

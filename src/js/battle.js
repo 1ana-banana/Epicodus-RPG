@@ -48,10 +48,10 @@ export default class Battle {
         this.character.inventory.AddItem(item);
       });
       
-      this.character.gold += drops[drops.length - 1];
+      this.character.money += drops[drops.length - 1];
 
     } else if (result === "lose") {
-      console.log("gameover screen");
+      console.log("do something for game-over");
     } else {
       this.character.hp = this.character.charClass.str + 50;
     }

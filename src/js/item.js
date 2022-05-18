@@ -8,7 +8,7 @@ export default class Item {
   }
 
   ToString() {
-    return '${this.name}: [str: $this.str}, dex: ${this.dex}, int: ${this.int}] ${this.value *1.5}dollars';
+    return `${this.name}: [str: ${this.str}, dex: ${this.dex}, int: ${this.int}] ${this.value * 1.5} RevBucks`;
   }
 
   static CreateItem(level) {
